@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct Continents_CountriesApp: App {
+    
+    @StateObject var countriesDataService = CountriesDataService()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(countriesDataService)
         }
     }
 }

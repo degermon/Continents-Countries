@@ -11,6 +11,9 @@
 		656E1D0126F249090018F3DA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E1D0026F249090018F3DA /* ContentView.swift */; };
 		656E1D0326F2490B0018F3DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656E1D0226F2490B0018F3DA /* Assets.xcassets */; };
 		656E1D0626F2490B0018F3DA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 656E1D0526F2490B0018F3DA /* Preview Assets.xcassets */; };
+		656E1D1126F24CDA0018F3DA /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E1D1026F24CDA0018F3DA /* Country.swift */; };
+		656E1D1526F24FD20018F3DA /* LoadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E1D1426F24FD20018F3DA /* LoadButton.swift */; };
+		656E1D1B26F254F60018F3DA /* CountriesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E1D1A26F254F60018F3DA /* CountriesDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,9 @@
 		656E1D0226F2490B0018F3DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		656E1D0526F2490B0018F3DA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		656E1D0726F2490B0018F3DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		656E1D1026F24CDA0018F3DA /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		656E1D1426F24FD20018F3DA /* LoadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadButton.swift; sourceTree = "<group>"; };
+		656E1D1A26F254F60018F3DA /* CountriesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +42,7 @@
 		656E1CF226F249090018F3DA = {
 			isa = PBXGroup;
 			children = (
+				656E1CFE26F249090018F3DA /* Continents_CountriesApp.swift */,
 				656E1CFD26F249090018F3DA /* Continents-Countries */,
 				656E1CFC26F249090018F3DA /* Products */,
 			);
@@ -52,8 +59,10 @@
 		656E1CFD26F249090018F3DA /* Continents-Countries */ = {
 			isa = PBXGroup;
 			children = (
-				656E1CFE26F249090018F3DA /* Continents_CountriesApp.swift */,
-				656E1D0026F249090018F3DA /* ContentView.swift */,
+				656E1D1226F24CE80018F3DA /* Services */,
+				656E1D0F26F249F20018F3DA /* Models */,
+				656E1D1326F24FB10018F3DA /* View */,
+				656E1D1926F254060018F3DA /* Components */,
 				656E1D0226F2490B0018F3DA /* Assets.xcassets */,
 				656E1D0726F2490B0018F3DA /* Info.plist */,
 				656E1D0426F2490B0018F3DA /* Preview Content */,
@@ -67,6 +76,38 @@
 				656E1D0526F2490B0018F3DA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		656E1D0F26F249F20018F3DA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				656E1D1026F24CDA0018F3DA /* Country.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		656E1D1226F24CE80018F3DA /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				656E1D1A26F254F60018F3DA /* CountriesDataService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		656E1D1326F24FB10018F3DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				656E1D0026F249090018F3DA /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		656E1D1926F254060018F3DA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				656E1D1426F24FD20018F3DA /* LoadButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +181,9 @@
 			files = (
 				656E1D0126F249090018F3DA /* ContentView.swift in Sources */,
 				656E1CFF26F249090018F3DA /* Continents_CountriesApp.swift in Sources */,
+				656E1D1126F24CDA0018F3DA /* Country.swift in Sources */,
+				656E1D1526F24FD20018F3DA /* LoadButton.swift in Sources */,
+				656E1D1B26F254F60018F3DA /* CountriesDataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

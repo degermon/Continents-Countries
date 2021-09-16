@@ -10,25 +10,25 @@ import SwiftUI
 struct LoadButton: View {
     // MARK: - PROPERTIES
     
-    @EnvironmentObject var countriesDataService: CountriesDataService
+    @EnvironmentObject var countryViewModel: CountryViewModel
     
     // MARK: - BODY
     
     var body: some View {
         Button(action: {
-            countriesDataService.getCountriesWorldwide()
+            countryViewModel.fetchAllCountriesList()
         }, label: {
             HStack {
-                Text(countriesDataService.allCountries.isEmpty ? "Load Continents" : "Reload Continents")
-                Image(systemName: countriesDataService.allCountries.isEmpty ? "icloud.and.arrow.down" : "arrow.counterclockwise")
+                Text(countryViewModel.allContinents.isEmpty ? "Load Continents" : "Reload Continents")
+                Image(systemName: countryViewModel.allContinents.isEmpty ? "icloud.and.arrow.down" : "arrow.counterclockwise")
             } //: HSTACK
             .padding()
             .font(.title)
             .background(Capsule().strokeBorder(Color("ColorCustomLightPurple"), lineWidth: 4))
             .shadow(radius: 4)
-        })
+        }) //: BUTTON
         .accentColor(Color("ColorCustomLightPurple"))
-        .padding(7)
+        .padding(9)
     }
 }
 
@@ -37,7 +37,7 @@ struct LoadButton: View {
 struct Button_Previews: PreviewProvider {
     static var previews: some View {
         LoadButton()
-            .environmentObject(CountriesDataService())
+            .environmentObject(CountryViewModel())
             .previewLayout(.sizeThatFits)
     }
 }

@@ -10,25 +10,25 @@ import SwiftUI
 struct ContentView: View {
     // MARK: - PROPERTIES
     
-    @EnvironmentObject var countriesDataService: CountriesDataService
+    @EnvironmentObject var countryViewModel: CountryViewModel
     
     // MARK: - BODY
     
     var body: some View {
-        VStack {
-            if countriesDataService.isLoading {
+        VStack(spacing: 5) {
+            if countryViewModel.isLoading {
                 Spacer()
                 ProgressView()
             } else {
                 List {
-                    ForEach(countriesDataService.allCountries) { country in
-                        Text(country.countryName ?? "No name")
+                    ForEach(countryViewModel.allContinents, id: \.self) { continent in
+                        DropdownList(continent: continent)
                     }
-                }
+                } //: LIST
             }
             Spacer()
             LoadButton()
-        }
+        } //: VSTACK
     }
 }
 
@@ -36,6 +36,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(CountriesDataService())
+        ContentView()
+            .environmentObject(CountryViewModel())
     }
 }

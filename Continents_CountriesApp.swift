@@ -10,12 +10,12 @@ import SwiftUI
 @main
 struct Continents_CountriesApp: App {
     
-    @StateObject var countriesDataService = CountriesDataService()
+    @StateObject var countryViewModel = CountryViewModel()
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(countriesDataService)
+                .environmentObject(countryViewModel)
         }
     }
 }

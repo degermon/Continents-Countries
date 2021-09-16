@@ -7,11 +7,8 @@
 
 import Foundation
 
-struct CountriesWorldwide: Codable {
-    let countries: [Country]
-}
-
 struct Country: Codable, Identifiable {
+    
     let id = UUID()
     let continentCode: String?
     let continentName: String?

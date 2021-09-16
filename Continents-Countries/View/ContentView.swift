@@ -15,7 +15,7 @@ struct ContentView: View {
     // MARK: - BODY
     
     var body: some View {
-        VStack(spacing: 5) {
+        VStack(spacing: 7) {
             if countryViewModel.isLoading {
                 Spacer()
                 ProgressView()
@@ -23,7 +23,7 @@ struct ContentView: View {
                 List {
                     ForEach(countryViewModel.allContinents, id: \.self) { continent in
                         DropdownList(continent: continent)
-                    }
+                    } //: LOOP
                 } //: LIST
             }
             Spacer()

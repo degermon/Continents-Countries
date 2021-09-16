@@ -19,14 +19,14 @@ struct DropdownList: View {
     
     var body: some View {
         VStack {
-            withAnimation {
                 DisclosureGroup("\(continent)", isExpanded: $isExpanded) {
                     VStack(alignment: .leading, spacing: 5) {
                         ForEach(countryList) { country in
-                            Text(country.countryName ?? "No name")
+                            Text(countryViewModel.shortenCountryNameFor(country: country.countryName))
                                 .font(.title3)
-                                .padding(10) // for texh identation
-                        }
+                                .lineLimit(2)
+                                .padding(10) // for text identation
+                        } //: LOOP
                     } //: VSTACK
                     .frame(maxWidth: .infinity, alignment: .leading) // so expanded/shown text is left-justified
                 } //: DISCLOSURE
@@ -36,10 +36,8 @@ struct DropdownList: View {
                 .padding()
                 .background(Color.gray)
                 .cornerRadius(8)
-            } //: ANIMATION
             Spacer()
         } //: VSTACK
-        .animation(.linear)
         .onAppear {
             countryList = countryViewModel.fetchCountriesFor(continent: continent)
         }

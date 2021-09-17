@@ -20,14 +20,15 @@ struct LoadButton: View {
         }, label: {
             HStack {
                 Text(countryViewModel.allContinents.isEmpty ? "Load Continents" : "Reload Continents")
+                    .modifier(ResizingText())
                 Image(systemName: countryViewModel.allContinents.isEmpty ? "icloud.and.arrow.down" : "arrow.counterclockwise")
             } //: HSTACK
             .padding()
             .font(.title)
-            .background(Capsule().strokeBorder(Color("ColorCustomPurple"), lineWidth: 4))
+            .background(Capsule().strokeBorder(Color("ColorCustomRed"), lineWidth: 4))
             .shadow(radius: 4)
         }) //: BUTTON
-        .accentColor(Color("ColorCustomPurple"))
+        .accentColor(Color("ColorCustomRed"))
         .padding(9)
     }
 }

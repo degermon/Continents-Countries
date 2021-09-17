@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftfulLoadingIndicators
 
 struct ContentView: View {
     // MARK: - PROPERTIES
@@ -17,12 +18,13 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 7) {
             ListTitle()
-            if countryViewModel.allCountries.isEmpty {
+            if countryViewModel.allCountries.isEmpty && !countryViewModel.isLoading {
                 Placeholder()
                     .offset(CGSize(width: 0, height: UIScreen.main.bounds.height * 0.2))
             }
             if countryViewModel.isLoading {
-//                ProgressView()
+                Spacer()
+                LoadingIndicator(animation: .threeBallsTriangle, color: Color("ColorCustomRed"), size: .large, speed: .normal)
             } else {
                 ScrollView {
                     ForEach(countryViewModel.allContinents, id: \.self) { continent in

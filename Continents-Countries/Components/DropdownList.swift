@@ -24,6 +24,7 @@ struct DropdownList: View {
                 Text("\(continent)")
                     .fontWeight(.medium)
                     .font(.title)
+                    .modifier(ResizingText())
                 Spacer()
                 Image(systemName: expand ? "chevron.up": "chevron.down")
                     .resizable()
@@ -38,6 +39,7 @@ struct DropdownList: View {
                 ForEach(countryList) { country in
                     Text(countryViewModel.shortenCountryNameFor(country: country.countryName))
                         .font(.title3)
+                        .modifier(ResizingText())
                         .foregroundColor(Color("ColorCustomWhite"))
                         .lineLimit(2)
                         .padding(10)

@@ -12,8 +12,9 @@ struct ListTitle: View {
         Text("Continents & Countries")
             .font(.largeTitle)
             .fontWeight(.medium)
-            .foregroundColor(Color("ColorCustomPurple"))
+            .foregroundColor(Color("ColorCustomRed"))
             .shadow(radius: 4)
+            .modifier(ResizingText())
     }
 }
 

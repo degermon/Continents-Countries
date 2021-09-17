@@ -16,14 +16,20 @@ struct ContentView: View {
     
     var body: some View {
         VStack(spacing: 7) {
+            ListTitle()
+            if countryViewModel.allCountries.isEmpty {
+                Placeholder()
+                    .offset(CGSize(width: 0, height: UIScreen.main.bounds.height * 0.2))
+            }
             if countryViewModel.isLoading {
-                Spacer()
-                ProgressView()
+//                ProgressView()
             } else {
-                List {
+                ScrollView {
                     ForEach(countryViewModel.allContinents, id: \.self) { continent in
                         DropdownList(continent: continent)
+                            .shadow(radius: 8)
                     } //: LOOP
+                    .padding()
                 } //: LIST
             }
             Spacer()

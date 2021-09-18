@@ -12,12 +12,13 @@ class CountriesDataService {
     
     @Published var allCountries = [Country]()
     var countriesSubscription: AnyCancellable?
+    private let sourceUrl = "https://pkgstore.datahub.io/JohnSnowLabs/country-and-continent-codes-list/country-and-continent-codes-list-csv_json/data/c218eebbf2f8545f3db9051ac893d69c/country-and-continent-codes-list-csv_json.json"
     
     func getCountriesList() {
-        guard let url = URL(string: "https://pkgstore.datahub.io/JohnSnowLabs/country-and-continent-codes-list/country-and-continent-codes-list-csv_json/data/c218eebbf2f8545f3db9051ac893d69c/country-and-continent-codes-list-csv_json.json") else { return }
+        guard let url = URL(string: sourceUrl) else { return }
         
         countriesSubscription = URLSession.shared.dataTaskPublisher(for: url)
-            .subscribe(on: DispatchQueue.global(qos: .background)) // subscribe on background thread, should be there by default
+            .subscribe(on: DispatchQueue.global(qos: .background)) // subscribe on background thread, should be there by default (still adding it just in case)
             .receive(on: DispatchQueue.main) // receive it on main thread
             .tryMap({ output -> Data in
                 guard let httpResponse = output.response as? HTTPURLResponse, httpResponse.statusCode >= 200 else {

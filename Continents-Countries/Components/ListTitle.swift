@@ -14,7 +14,7 @@ struct ListTitle: View {
             .fontWeight(.medium)
             .foregroundColor(Color("ColorCustomRed"))
             .shadow(radius: 4)
-            .modifier(ResizingText())
+            .modifier(ScalingText())
     }
 }
 

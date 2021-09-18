@@ -26,7 +26,7 @@ struct ContentView: View {
                 Spacer()
                 LoadingIndicator(animation: .threeBallsTriangle, color: Color("ColorCustomRed"), size: .large, speed: .normal)
             } else {
-                ScrollView {
+                ScrollView(.vertical) {
                     ForEach(countryViewModel.allContinents, id: \.self) { continent in
                         DropdownList(continent: continent)
                             .shadow(radius: 8)

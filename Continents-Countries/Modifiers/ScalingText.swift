@@ -1,5 +1,5 @@
 //
-//  ResizingText.swift
+//  ScalingText.swift
 //  Continents-Countries
 //
 //  Created by Daniel Šuškevič on 2021-09-17.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ResizingText: ViewModifier {
+struct ScalingText: ViewModifier { // keeps whole text on screen, downscaling if needed
     func body(content: Content) -> some View {
         content
             .scaledToFit()

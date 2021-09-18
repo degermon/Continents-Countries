@@ -24,7 +24,7 @@ struct DropdownList: View {
                 Text("\(continent)")
                     .fontWeight(.medium)
                     .font(.title)
-                    .modifier(ResizingText())
+                    .modifier(ScalingText())
                 Spacer()
                 Image(systemName: expand ? "chevron.up": "chevron.down")
                     .resizable()
@@ -39,11 +39,12 @@ struct DropdownList: View {
                 ForEach(countryList) { country in
                     Text(countryViewModel.shortenCountryNameFor(country: country.countryName))
                         .font(.title3)
-                        .modifier(ResizingText())
                         .foregroundColor(Color("ColorCustomWhite"))
                         .lineLimit(2)
                         .padding(10)
-                    Divider()
+                    if country != countryList.last {
+                        Divider()
+                    } // don't need divider after the lst element
                 } //: LOOP
             } // IF EXPANDED
         } //: VSTACK

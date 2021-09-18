@@ -9,12 +9,19 @@ import SwiftUI
 
 struct Placeholder: View {
     var body: some View {
-        Image("globe")
-            .resizable()
-            .scaledToFit()
-            .padding()
-            .background(Color("ColorCustomGray"))
-            .clipShape(Circle())
+        VStack(spacing: 8) {
+            Image("globe")
+                .resizable()
+                .scaledToFit()
+                .padding()
+                .background(Color("ColorCustomGray"))
+                .clipShape(Circle())
+            Text("No data available")
+                .font(Font.custom("ChalkboardSE-Bold", size: 40))
+                .foregroundColor(Color("ColorCustomRed"))
+                .modifier(ScalingText())
+        }
+        .shadow(radius: 5)
     }
 }
 

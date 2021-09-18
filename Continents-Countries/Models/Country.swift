@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Country: Codable, Identifiable {
+struct Country: Codable, Identifiable, Equatable {
     
     let id = UUID()
     let continentCode: String?

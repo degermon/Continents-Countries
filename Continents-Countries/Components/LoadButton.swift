@@ -20,7 +20,7 @@ struct LoadButton: View {
         }, label: {
             HStack {
                 Text(countryViewModel.allContinents.isEmpty ? "Load Continents" : "Reload Continents")
-                    .modifier(ResizingText())
+                    .modifier(ScalingText())
                 Image(systemName: countryViewModel.allContinents.isEmpty ? "icloud.and.arrow.down" : "arrow.counterclockwise")
             } //: HSTACK
             .padding()

@@ -21,7 +21,18 @@
 		656E1D1B26F254F60018F3DA /* CountriesDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E1D1A26F254F60018F3DA /* CountriesDataService.swift */; };
 		656E1D2026F3A00F0018F3DA /* CountryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E1D1F26F3A00F0018F3DA /* CountryViewModel.swift */; };
 		656E1D2326F3AB310018F3DA /* SequenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656E1D2226F3AB310018F3DA /* SequenceExtension.swift */; };
+		65B48F3826F6538300F07884 /* Continents_CountriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B48F3726F6538300F07884 /* Continents_CountriesTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		65B48F3A26F6538300F07884 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 656E1CF326F249090018F3DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 656E1CFA26F249090018F3DA;
+			remoteInfo = "Continents-Countries";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6551113E26F4F00A00DADCD4 /* DropdownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownList.swift; sourceTree = "<group>"; };
@@ -39,6 +50,9 @@
 		656E1D1A26F254F60018F3DA /* CountriesDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesDataService.swift; sourceTree = "<group>"; };
 		656E1D1F26F3A00F0018F3DA /* CountryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryViewModel.swift; sourceTree = "<group>"; };
 		656E1D2226F3AB310018F3DA /* SequenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtension.swift; sourceTree = "<group>"; };
+		65B48F3526F6538300F07884 /* Continents-CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Continents-CountriesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65B48F3726F6538300F07884 /* Continents_CountriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Continents_CountriesTests.swift; sourceTree = "<group>"; };
+		65B48F3926F6538300F07884 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				6551114926F50F9A00DADCD4 /* SwiftfulLoadingIndicators in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65B48F3226F6538300F07884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +87,7 @@
 			children = (
 				656E1CFE26F249090018F3DA /* Continents_CountriesApp.swift */,
 				656E1CFD26F249090018F3DA /* Continents-Countries */,
+				65B48F3626F6538300F07884 /* Continents-CountriesTests */,
 				656E1CFC26F249090018F3DA /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				656E1CFB26F249090018F3DA /* Continents-Countries.app */,
+				65B48F3526F6538300F07884 /* Continents-CountriesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,6 +177,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		65B48F3626F6538300F07884 /* Continents-CountriesTests */ = {
+			isa = PBXGroup;
+			children = (
+				65B48F3726F6538300F07884 /* Continents_CountriesTests.swift */,
+				65B48F3926F6538300F07884 /* Info.plist */,
+			);
+			path = "Continents-CountriesTests";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -177,6 +209,24 @@
 			productReference = 656E1CFB26F249090018F3DA /* Continents-Countries.app */;
 			productType = "com.apple.product-type.application";
 		};
+		65B48F3426F6538300F07884 /* Continents-CountriesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65B48F3C26F6538300F07884 /* Build configuration list for PBXNativeTarget "Continents-CountriesTests" */;
+			buildPhases = (
+				65B48F3126F6538300F07884 /* Sources */,
+				65B48F3226F6538300F07884 /* Frameworks */,
+				65B48F3326F6538300F07884 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				65B48F3B26F6538300F07884 /* PBXTargetDependency */,
+			);
+			name = "Continents-CountriesTests";
+			productName = "Continents-CountriesTests";
+			productReference = 65B48F3526F6538300F07884 /* Continents-CountriesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -188,6 +238,10 @@
 				TargetAttributes = {
 					656E1CFA26F249090018F3DA = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					65B48F3426F6538300F07884 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 656E1CFA26F249090018F3DA;
 					};
 				};
 			};
@@ -208,6 +262,7 @@
 			projectRoot = "";
 			targets = (
 				656E1CFA26F249090018F3DA /* Continents-Countries */,
+				65B48F3426F6538300F07884 /* Continents-CountriesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -219,6 +274,13 @@
 			files = (
 				656E1D0626F2490B0018F3DA /* Preview Assets.xcassets in Resources */,
 				656E1D0326F2490B0018F3DA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		65B48F3326F6538300F07884 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +305,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		65B48F3126F6538300F07884 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65B48F3826F6538300F07884 /* Continents_CountriesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		65B48F3B26F6538300F07884 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 656E1CFA26F249090018F3DA /* Continents-Countries */;
+			targetProxy = 65B48F3A26F6538300F07884 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		656E1D0826F2490B0018F3DA /* Debug */ = {
@@ -406,6 +484,46 @@
 			};
 			name = Release;
 		};
+		65B48F3D26F6538300F07884 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R738Q22NX;
+				INFOPLIST_FILE = "Continents-CountriesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.degermon.Continents-CountriesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Continents-Countries.app/Continents-Countries";
+			};
+			name = Debug;
+		};
+		65B48F3E26F6538300F07884 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7R738Q22NX;
+				INFOPLIST_FILE = "Continents-CountriesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.degermon.Continents-CountriesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Continents-Countries.app/Continents-Countries";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -423,6 +541,15 @@
 			buildConfigurations = (
 				656E1D0B26F2490B0018F3DA /* Debug */,
 				656E1D0C26F2490B0018F3DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65B48F3C26F6538300F07884 /* Build configuration list for PBXNativeTarget "Continents-CountriesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65B48F3D26F6538300F07884 /* Debug */,
+				65B48F3E26F6538300F07884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

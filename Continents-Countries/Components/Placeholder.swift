@@ -17,7 +17,7 @@ struct Placeholder: View {
                 .background(Color("ColorCustomGray"))
                 .clipShape(Circle())
             Text("No data available")
-                .font(Font.custom("ChalkboardSE-Bold", size: 40))
+                .font(Font.custom("ChalkboardSE-Regular", size: 40))
                 .foregroundColor(Color("ColorCustomRed"))
                 .modifier(ScalingText())
         }

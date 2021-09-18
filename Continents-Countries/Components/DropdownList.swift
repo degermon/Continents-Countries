@@ -31,6 +31,7 @@ struct DropdownList: View {
                     .frame(width: 20, height: 12)
             } //: HSTACK
             .foregroundColor(Color("ColorCustomWhite"))
+            .contentShape(Rectangle()) // for full HStack to react on tap (spacer empty spcae specifically)
             .onTapGesture {
                 self.expand.toggle()
             } //: TAP

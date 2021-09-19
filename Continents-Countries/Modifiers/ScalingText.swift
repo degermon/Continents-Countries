@@ -10,8 +10,8 @@ import SwiftUI
 struct ScalingText: ViewModifier { // keeps whole text on screen, downscaling if needed
     func body(content: Content) -> some View {
         content
-            .scaledToFit()
-            .minimumScaleFactor(0.1)
+//            .scaledToFit()
             .lineLimit(1)
+            .minimumScaleFactor(0.2)
     }
 }

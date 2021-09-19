@@ -42,7 +42,6 @@ struct DropdownList: View {
                         .font(.title3)
                         .foregroundColor(Color("ColorCustomWhite"))
                         .lineLimit(2)
-                        .padding(10)
                     if country != countryList.last {
                         Divider()
                     } // don't need divider after the lst element

@@ -29,7 +29,10 @@ struct LoadButton: View {
             .shadow(radius: 4)
         }) //: BUTTON
         .accentColor(Color("ColorCustomRed"))
-        .padding(9)
+        .padding(.top, 2)
+        .padding(.leading, 9)
+        .padding(.trailing, 9)
+        .padding(.bottom, 9)
     }
 }
 

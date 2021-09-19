@@ -27,6 +27,7 @@ struct ContentView: View {
             if countryViewModel.isLoading {
                 Spacer()
                 LoadingIndicator(animation: .threeBallsTriangle, color: Color("ColorCustomRed"), size: .large, speed: .normal)
+                Spacer()
             } else {
                 ScrollView(.vertical) {
                     ForEach(countryViewModel.allContinents, id: \.self) { continent in
@@ -36,7 +37,6 @@ struct ContentView: View {
                     .padding()
                 } //: LIST
             }
-            Spacer()
             LoadButton()
         } //: VSTACK
     }

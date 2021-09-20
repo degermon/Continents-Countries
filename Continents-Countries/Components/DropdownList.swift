@@ -25,10 +25,12 @@ struct DropdownList: View {
                     .fontWeight(.medium)
                     .font(.title)
                     .modifier(ScalingText())
+                    .offset(x: 10, y: 0) // just a little horizontal offset to center text a little
                 Spacer()
-                Image(systemName: expand ? "chevron.up": "chevron.down")
+                Image(systemName:"chevron.down")
                     .resizable()
                     .frame(width: 20, height: 12)
+                    .rotationEffect(Angle.degrees(expand ? -180 : 0))
             } //: HSTACK
             .foregroundColor(Color("ColorCustomWhite"))
             .contentShape(Rectangle()) // for full HStack to react on tap (spacer empty spcae specifically)

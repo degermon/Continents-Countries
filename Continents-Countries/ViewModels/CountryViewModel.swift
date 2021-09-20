@@ -14,26 +14,20 @@ class CountryViewModel: ObservableObject {
     
     @Published var allCountries = [Country]() {
         didSet {
-            filtertAllContinents()
+            filterAllContinents()
         }
     }
     @Published var allContinents = [String]() // array of all continents
     @Published var isLoading: Bool = false // Boolean value for loading/processing data
-    
     private let countriesDataService = CountriesDataService()
-    private var cancellables = Set<AnyCancellable>()
-    
-    // MARK: - INIT
-    
-    init() {
-        addSubscribers()
-    }
     
     // MARK: - FUNCTIONS
     
     func fetchAllCountriesList() {
         isLoading = true
-        countriesDataService.getCountriesList()
+        countriesDataService.getCountriesList { [weak self] fetchedCountryList in
+            self?.allCountries = fetchedCountryList
+        }
     }
     
     func fetchCountriesFor(continent: String) -> [Country] {
@@ -54,15 +48,7 @@ class CountryViewModel: ObservableObject {
         return shortCountryName
     }
     
-    private func addSubscribers() {
-        countriesDataService.$allCountries
-            .sink { [weak self] returnedCountries in
-                self?.allCountries = returnedCountries
-            }
-            .store(in: &cancellables)
-    }
-    
-    private func filtertAllContinents() {
+    private func filterAllContinents() {
         let continents = allCountries
             .map{ $0.continentName } // get all continets from array of countries
         allContinents = continents

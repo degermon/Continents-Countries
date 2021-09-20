@@ -22,7 +22,7 @@ class Continents_CountriesTests: XCTestCase {
 
     func testShortenCountryNameCorrectly() {
         // given
-        let country = Country(continentCode: nil, continentName: nil, countryName: "Test name, this should not be seen in result", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil)
+        let country = Country(continentCode: nil, continentName: nil, countryName: "Test name, this should not be seen in the result", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil)
         let expectedCountryShortenedName = "Test name"
         
         // when
@@ -35,8 +35,8 @@ class Continents_CountriesTests: XCTestCase {
     func testCountryListFetchForSpecificContinent() {
         // given
         sut.allCountries = [
-            Country(continentCode: nil, continentName: "Africa", countryName: "Test case1", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil),
             Country(continentCode: nil, continentName: "Africa", countryName: "Test case2", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil),
+            Country(continentCode: nil, continentName: "Africa", countryName: "Test case1", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil),
             Country(continentCode: nil, continentName: "Europe", countryName: "Test case3", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil),
             Country(continentCode: nil, continentName: "Africa", countryName: "Test case4", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil),
             Country(continentCode: nil, continentName: "Antarctica", countryName: "Test case5", countryNumber: nil, threeLetterCountryCode: nil, twoLetterCountryCode: nil)

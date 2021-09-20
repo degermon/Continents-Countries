@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65484AD526F8E47A006EBC7F /* APIDataRequestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65484AD426F8E479006EBC7F /* APIDataRequestTests.swift */; };
 		6551113F26F4F00A00DADCD4 /* DropdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551113E26F4F00A00DADCD4 /* DropdownList.swift */; };
 		6551114426F5023500DADCD4 /* ListTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551114326F5023500DADCD4 /* ListTitle.swift */; };
 		6551114626F5044800DADCD4 /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6551114526F5044800DADCD4 /* Placeholder.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		65484AD426F8E479006EBC7F /* APIDataRequestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIDataRequestTests.swift; sourceTree = "<group>"; };
 		6551113E26F4F00A00DADCD4 /* DropdownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownList.swift; sourceTree = "<group>"; };
 		6551114326F5023500DADCD4 /* ListTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTitle.swift; sourceTree = "<group>"; };
 		6551114526F5044800DADCD4 /* Placeholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Placeholder.swift; sourceTree = "<group>"; };
@@ -104,15 +106,15 @@
 		656E1CFD26F249090018F3DA /* Continents-Countries */ = {
 			isa = PBXGroup;
 			children = (
-				6551114A26F511C100DADCD4 /* Modifiers */,
-				656E1D2126F3AB150018F3DA /* Extensions */,
-				656E1D1E26F395300018F3DA /* ViewModels */,
-				656E1D1226F24CE80018F3DA /* Services */,
-				656E1D0F26F249F20018F3DA /* Models */,
-				656E1D1326F24FB10018F3DA /* View */,
-				656E1D1926F254060018F3DA /* Components */,
-				656E1D0226F2490B0018F3DA /* Assets.xcassets */,
 				656E1D0726F2490B0018F3DA /* Info.plist */,
+				656E1D0226F2490B0018F3DA /* Assets.xcassets */,
+				656E1D1926F254060018F3DA /* Components */,
+				656E1D2126F3AB150018F3DA /* Extensions */,
+				656E1D0F26F249F20018F3DA /* Models */,
+				6551114A26F511C100DADCD4 /* Modifiers */,
+				656E1D1226F24CE80018F3DA /* Services */,
+				656E1D1326F24FB10018F3DA /* View */,
+				656E1D1E26F395300018F3DA /* ViewModels */,
 				656E1D0426F2490B0018F3DA /* Preview Content */,
 			);
 			path = "Continents-Countries";
@@ -180,6 +182,7 @@
 		65B48F3626F6538300F07884 /* Continents-CountriesTests */ = {
 			isa = PBXGroup;
 			children = (
+				65484AD426F8E479006EBC7F /* APIDataRequestTests.swift */,
 				65B48F3726F6538300F07884 /* Continents_CountriesTests.swift */,
 				65B48F3926F6538300F07884 /* Info.plist */,
 			);
@@ -309,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65484AD526F8E47A006EBC7F /* APIDataRequestTests.swift in Sources */,
 				65B48F3826F6538300F07884 /* Continents_CountriesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
